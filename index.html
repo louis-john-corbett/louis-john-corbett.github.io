@@ -19,18 +19,18 @@
 		<!-- JQuery -->
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 	</head>
-	<body class="is-loading">
 
+	<body class="is-loading">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -40,34 +40,22 @@
 						<header>
 							<span class="avatar"><img src="images/profile-pic.jpg" alt="" /></span>
 							<h1>Louis "Jack" Corbett</h1>
-							<p>Software Test Engineer<br>Photography/Videography Enthusiast<br>Mountaineering Novice<br>World Traveler</p>
+							<p>Software  Test  Engineer<br>Photography  Enthusiast<br>Novice  Mountaineer<br>Avid  Learner</p>
 						</header>
-
-						<!-- Creates the bootstrap modal where the image will appear -->
-						<div class="modal fade" id="imagemodal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						  <div class="modal-dialog">
-						    <div class="modal-content">
-						      <div class="modal-body">
-						        <img src="" id="imagepreview" style="width: 300px; height: 300px;" >
-						      </div>
-						    </div>
-						  </div>
-						</div>
 
 						<footer>
 							<ul class="icons">
-								<!--<li><a href="#" class="fa-twitter">Twitter</a></li>-->
 								<li><a href="https://www.instagram.com/corbettlj/?hl=en" class="fa-instagram" title="Instagram">Instagram</a></li>
 								<li><a href="https://www.facebook.com/louis.john.corbett" class="fa-facebook" title="Facebook">Facebook</a></li>
                 <li><a href="https://github.com/louis-john-corbett" class="fa-github" title="GitHub">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" class="fa-linkedin" title="LinkedIn">LinkedIn</a></li>
-                <br>
-								<li><a href="#" id="pop" class="fa-snapchat-ghost" title="Snapchat" src="./images/snapchat.png">Snapchat Code</a></li>
-                <li><a href="#" class="fa-map-marker" title="Map to Come">Map to Come</a></li>
+								<li><a href="#" id="snapchat-modal-link" class="fa-snapchat-ghost" title="Snapchat" data-toggle="modal" data-target=".snapchat-modal">Snapchat Code</a></li>
+							  <br>
                 <li><a href="./lens/index.html" class="fa-photo" title="Photo Album">Photo Album</a></li>
                 <li><a href="./files/Louis-Corbett.pdf" class="fa-file-pdf-o" title="Resume (PDF)" download>Resume</a></li>
-								<br>
-								<li><a href="./aerial/index.html" class="fa-lightbulb-o" title="Other Page Idea">Other Idea</a></li>
+								<li><a href="mailto:louis.john.corbett@gmail.com" class="fa-envelope" title="Email Me">Email</a></li>
+								<li><a href="#" class="fa-map-marker" title="Map to Come">Map to Come</a></li>
+								<!--<li><a href="./aerial/index.html" class="fa-lightbulb-o" title="Other Page Idea">Other Idea</a></li>-->
               </ul>
 						</footer>
 					</section>
@@ -89,10 +77,19 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 
-				$("#pop").on("click", function() {
-				   $('#imagepreview').attr('src', $('#pop').attr('src')); // here asign the image to the modal when the user click the enlarge link
-				   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+				$('#snapchat-modal').on('shown.bs.modal', function(e){
+					$('#snapchat-modal-link').one('focus', function(e){$(this).blur();});
 				});
 			</script>
+
+			<div class="modal fade snapchat-modal" id="snapchat-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-sm" role="document">
+			    <div class="modal-content">
+			      <div class="modal-body">
+			        <img src="./images/snapchat.png" id="snapchat-2d-barcode" class="img-responsive center-block" >
+			      </div>
+			    </div>
+			  </div>
+			</div>
 	</body>
 </html>

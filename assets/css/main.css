@@ -132,7 +132,7 @@
 		font-size: 14pt;
 		font-weight: 300;
 		line-height: 2;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.20em;
 		text-transform: uppercase;
 	}
 
@@ -854,4 +854,10 @@
 
 		body.is-ie #wrapper {
 			height: 100%;
+		}
+
+  /* Jack Custom */
+
+		.modal-dialog {
+			width:20%;
 		}
