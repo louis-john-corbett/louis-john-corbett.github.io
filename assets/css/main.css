@@ -497,7 +497,7 @@
 		}
 
 			ul.alt li {
-				border-top: solid 1px #bbbbbb;
+				border-top: solid 1px #c8cccf;
 				padding: 0.5em 0;
 			}
 
@@ -524,8 +524,8 @@
 					display: block;
 					width: 3.75em;
 					height: 3.75em;
-					border-radius: 25%;
-					border: solid 1px #bbbbbb;
+					border-radius: 22%;
+					border: solid 1px #999999;
 					line-height: 3.75em;
 					overflow: hidden;
 					text-align: center;
@@ -544,10 +544,11 @@
 
 					ul.icons li a:before {
 						color: #ffffff;
-						text-shadow: 1.25px 0px 0px #bbbbbb, -1.25px 0px 0px #bbbbbb, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+						text-shadow: 1.25px 0px 0px #999999, -1.25px 0px 0px #999999, 0px 1.25px 0px #999999, 0px -1.25px 0px #999999;
 					}
 
 					ul.icons li a:hover:before {
+						color: #ffffff;
 						text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
 					}
 
@@ -706,7 +707,7 @@
 		position: relative;
 		max-width: 100%;
 		min-width: 27em;
-		padding: 4.5em 3em 3em 3em ;
+		padding: 4em 3em 1.5em 3em ;
 		background: #ffffff;
 		border-radius: 4px;
 		cursor: default;
@@ -763,7 +764,6 @@
 					left: -2em;
 					width: calc(100% + 4em);
 				}
-
 		}
 
 		body.is-loading #main {
@@ -859,6 +859,23 @@
 
   /* Jack Custom */
 
+	/*
 		.modal-dialog {
 			width:20%;
+			height: 20%;
 		}
+
+		ul.icons li#snapchat a {
+			line-height: 3.75em;
+			overflow: hidden;
+			text-align: center;
+			text-indent: 3.75em;
+			white-space: nowrap;
+			color: #fffc00
+		}
+
+		ul.icons li#snapchat a:hover:before {
+			color: #ffffff;
+			text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
+		}
+		*/
