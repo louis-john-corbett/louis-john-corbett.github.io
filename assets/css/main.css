@@ -504,92 +504,79 @@
 					border-top: 0;
 					padding-top: 0;
 				}
-
+/*
 		ul.icons {
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
 			margin-top: -0.675em;
-		}
+		}*/
 
 			ul.icons li {
 				display: inline-block;
+				list-style-type: none;
 				padding: 0.675em 0.5em;
 			}
 
-				ul.icons li a {
-					text-decoration: none;
-					position: relative;
-					display: block;
-					width: 3.75em;
-					height: 3.75em;
-					border-radius: 22%;
-					border: solid 1px #999999;
-					line-height: 3.75em;
-					overflow: hidden;
-					text-align: center;
-					text-indent: 3.75em;
-					white-space: nowrap;
-				}
+			ul li a i.fa {
+				background:inherit;
+				color: #fff;
+				width: 60px;
+				height: 60px;
+				border-radius: 15px;
+				font-size: 35px;
+				text-align: center;
+				margin-right: 10px;
+				padding-top: 15%;
 
-					ul.icons li a:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						font-family: FontAwesome;
-						font-style: normal;
-						font-weight: normal;
-						text-transform: none !important;
-					}
-
-					ul.icons li a:before {
-						color: #ffffff;
-						text-shadow: 1.25px 0px 0px #999999, -1.25px 0px 0px #999999, 0px 1.25px 0px #999999, 0px -1.25px 0px #999999;
-					}
-
-					ul.icons li a:hover:before {
-						color: #ffffff;
-						text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
-					}
-
-					ul.icons li a:before {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: inherit;
-						height: inherit;
-						font-size: 3.0rem;
-						line-height: inherit;
-						text-align: center;
-						text-indent: 0;
-					}
-
-					ul.icons li a:hover {
-						border-color: #ff7496;
-					}
-
-			@media screen and (max-width: 480px) {
-
-				ul.icons li a:before {
-					font-size: 3.0rem;
-				}
-
-			}
-
-		ul.actions {
-			cursor: default;
-			list-style: none;
-			padding-left: 0;
-		}
-
-			ul.actions li {
 				display: inline-block;
-				padding: 0 0.75em 0 0;
-				vertical-align: middle;
+				box-shadow: 0px 0px 5px #888;
+				/*affecting the white overlay for some reason*/
+				/*transition: 0.2s ease-in-out;*/
 			}
 
-				ul.actions li:last-child {
-					padding-right: 0;
-				}
+			ul li a i.fa:hover {
+				opacity: .7;
+			}
+
+			ul li a i.fa-instagram {
+				color: #000;
+				outline: 1px black;
+				/*background: radial-gradient(circle farthest-corner at 28% 100% ,
+						#FCDF8F 0%,
+            #FBD377 10%,
+            #FA8E37 22%,
+            #F73344 35%,
+            fade(#F73344, 0%) 65%
+        );*/
+				/*
+				background: -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+				background: -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+				background: -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+				background: radial-gradient(circle farthest-corner at 28% 100% , #FCDF8F 0%, #FBD377 10%, #FA8E37 22%, #F73344 35%, fade(#F73344, 0%) 65%)
+				*/
+			}
+			ul li a i.fa-facebook {
+				background:#3b5998;
+			}
+			ul li a i.fa-linkedin {
+				background:#007bb6;
+			}
+			ul li a i.fa-snapchat {
+				background:#3b5998;
+			}
+			ul li a i.fa-github {
+				background:#000;
+			}
+			ul li a i.fa-camera {
+				background:#007bb6;
+			}
+			ul li a i.fa-user-o {
+				background:#000;
+			}
+			ul li a i.fa-envelope-o {
+				background:#000;
+			}
 
 	dl {
 		margin: 0 0 1.5em 0;
@@ -859,10 +846,6 @@
   /* Jack Custom */
 
 	/*
-		.modal-dialog {
-			width:20%;
-			height: 20%;
-		}
 
 		ul.icons li#snapchat a {
 			line-height: 3.75em;
@@ -871,10 +854,5 @@
 			text-indent: 3.75em;
 			white-space: nowrap;
 			color: #fffc00
-		}
-
-		ul.icons li#snapchat a:hover:before {
-			color: #ffffff;
-			text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
 		}
 		*/
