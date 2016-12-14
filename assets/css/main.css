@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
-@import url('https://fonts.googleapis.com/css?family=Prociono');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Slabo+27px|Source+Sans+Pro:300');
+
 
 /*
 	Identity by HTML5 UP
@@ -17,7 +16,7 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font-family: 'Slabo 27px', serif;
+		font-family: 'Merriweather', serif;
 		vertical-align: baseline;
 	}
 
@@ -199,7 +198,7 @@
 
 	h1 {
 		font-size: 1.85em;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.04em;
 		margin: 0 0 0.525em 0;
 	}
 
@@ -571,7 +570,7 @@
 			@media screen and (max-width: 480px) {
 
 				ul.icons li a:before {
-					font-size: 1.5rem;
+					font-size: 3.0rem;
 				}
 
 			}
@@ -707,7 +706,7 @@
 		position: relative;
 		max-width: 100%;
 		min-width: 27em;
-		padding: 4em 3em 1.5em 3em ;
+		padding: 4em 2.25em 1.5em 2.25em ;
 		background: #ffffff;
 		border-radius: 4px;
 		cursor: default;
@@ -745,8 +744,8 @@
 				display: block;
 				position: absolute;
 				top: 50%;
-				left: -3em;
-				width: calc(100% + 6em);
+				left: -2.25em;
+				width: calc(100% + 4.5em);
 				height: 1px;
 				z-index: -1;
 				background: #c8cccf;
