@@ -530,10 +530,11 @@
 				padding-top: 18%;
 				display: inline-block;
 				box-shadow: 0px 0px 5px #888;
+				opacity: .95;
 			}
 
 			ul li a i.fa:hover {
-				opacity: .7;
+				opacity: .5;
 			}
 
 			#instagramIcon {
@@ -542,10 +543,11 @@
 				display: inline-block;
 				-webkit-filter: drop-shadow(0px 0px 2px #888);
 				filter: drop-shadow(0px 0px 2px #888);
+				opacity: .85;
 			}
 
 			#instagramIcon:hover {
-				opacity: .7;
+				opacity: .5;
 			}
 
 			ul li a i.fa-facebook {
