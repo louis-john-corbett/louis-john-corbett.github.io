@@ -30,10 +30,22 @@
 
 		<script>
 			$(document).ready(function(){
+				//Random background image rotation
 				var images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg', 'bg6.jpg'];
 				$('body').css({'background-image': 'url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/' + images[Math.floor(Math.random() * images.length)] + '")'});
+
+				//Replace first letters with slightly larger font
+				$('h1').html(function() {
+			    return $(this).text().replace(/\b(\w)/g, '<span class="caps">$1</span>')
+				});
+
+				//Replace first letters with slightly larger font
+				$('p').html(function() {
+			    return $(this).text().replace(/\b(\w)/g, '<span class="caps">$1</span>')
+				});
 			});
 
+			//Google Analytics code
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -53,8 +65,11 @@
 					<section id="main">
 						<header>
 							<span class="avatar"><img src="images/profile-pic.jpg" alt="" /></span>
-							<h1>Louis "Jack" Corbett</h1>
-							<p>Photography Enthusiast<br>Software Test Engineer<br>Novice Mountaineer<br>Avid Learner<br><br></p>
+							<h1>Louis <sup>"</sup>Jack" Corbett</h1>
+							<p>Photography Enthusiast</p>
+							<p>Software Test Engineer</p>
+							<p>Novice Mountaineer</p>
+							<p>Avid Learner</p>
 						</header>
 
 						<footer>
@@ -65,7 +80,7 @@
 								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></li>
                 <!--<li><a href="https://flic.kr/s/aHskHe7s3m" target="_blank" class="fa-flickr" title="Flickr">Flickr</a></li>-->
-                <li><a href="./portfolio/index.html" target="_blank" title="Photo Album"><i class="fa fa-camera"></i></a></li>
+                <li><a href="./gallery/index.html" target="_blank" title="Photo Album"><i class="fa fa-camera"></i></a></li>
 								<li><a href="./files/Louis-Corbett.pdf" title="Resume (PDF)" download><i class="fa fa-file-pdf-o"></i></a></li>
 								<li><a href="mailto:louis.john.corbett@gmail.com" title="Email Me"><i class="fa fa-envelope-o"></i></a></li>
 								<!--<li><a href="#" class="fa-map-marker" target="_blank" title="Map to Come">Map to Come</a></li>-->

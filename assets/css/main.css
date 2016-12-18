@@ -20,6 +20,10 @@
 		vertical-align: baseline;
 	}
 
+	header {
+		margin: 0 0 1em 0 !important;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -182,7 +186,7 @@
 	}
 
 	p {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0.1em 0 !important;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -197,9 +201,12 @@
 		}
 
 	h1 {
-		font-size: 1.85em;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.03em;
 		margin: 0 0 0.525em 0;
+	}
+
+	.caps {
+		font-size: 1.25em;
 	}
 
 	h2 {
@@ -566,10 +573,11 @@
 				background:#000;
 			}
 			ul li a i.fa-camera {
-				background:#90ee90;
+				background:#a3d1a3;
+				opacity:1.0;
 			}
 			ul li a i.fa-file-pdf-o {
-				background:#8b1a1a;
+				background:#a00000;
 			}
 			ul li a i.fa-envelope-o {
 				background:#458b00;
