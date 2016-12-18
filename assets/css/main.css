@@ -504,14 +504,14 @@
 					border-top: 0;
 					padding-top: 0;
 				}
-/*
+
 		ul.icons {
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
 			margin-top: -0.675em;
-		}*/
-
+		}
+		
 			ul.icons li {
 				display: inline-block;
 				list-style-type: none;
