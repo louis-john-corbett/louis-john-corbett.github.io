@@ -521,61 +521,56 @@
 			ul li a i.fa {
 				background:inherit;
 				color: #fff;
-				width: 60px;
-				height: 60px;
-				border-radius: 15px;
+				width: 55px;
+				height: 55px;
+				border-radius: 12px;
 				font-size: 35px;
 				text-align: center;
-				margin-right: 10px;
-				padding-top: 15%;
-
+				padding-left: 5%;
+				padding-top: 18%;
 				display: inline-block;
 				box-shadow: 0px 0px 5px #888;
-				/*affecting the white overlay for some reason*/
-				/*transition: 0.2s ease-in-out;*/
 			}
 
 			ul li a i.fa:hover {
 				opacity: .7;
 			}
 
-			ul li a i.fa-instagram {
-				color: #000;
-				outline: 1px black;
-				/*background: radial-gradient(circle farthest-corner at 28% 100% ,
-						#FCDF8F 0%,
-            #FBD377 10%,
-            #FA8E37 22%,
-            #F73344 35%,
-            fade(#F73344, 0%) 65%
-        );*/
-				/*
-				background: -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-				background: -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-				background: -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-				background: radial-gradient(circle farthest-corner at 28% 100% , #FCDF8F 0%, #FBD377 10%, #FA8E37 22%, #F73344 35%, fade(#F73344, 0%) 65%)
-				*/
+			#instagramIcon {
+				/*padding-top: 0px;*/
+				vertical-align: top;
+				display: inline-block;
+				-webkit-filter: drop-shadow(0px 0px 2px #888);
+				filter: drop-shadow(0px 0px 2px #888);
 			}
+
+			#instagramIcon:hover {
+				opacity: .7;
+			}
+
 			ul li a i.fa-facebook {
 				background:#3b5998;
 			}
 			ul li a i.fa-linkedin {
 				background:#007bb6;
 			}
-			ul li a i.fa-snapchat {
-				background:#3b5998;
+			ul li a i.fa-snapchat-ghost {
+				background:#FFFC00;
+				-webkit-text-stroke-width: 1px;
+  			-webkit-text-stroke-color: black;
+
 			}
 			ul li a i.fa-github {
 				background:#000;
 			}
 			ul li a i.fa-camera {
-				background:#007bb6;
+				background:#90ee90;
 			}
-			ul li a i.fa-user-o {
-				background:#000;
+			ul li a i.fa-file-pdf-o {
+				background:#8b1a1a;
 			}
 			ul li a i.fa-envelope-o {
-				background:#000;
+				background:#458b00;
 			}
 
 	dl {
