@@ -1383,10 +1383,6 @@
 
 /* Header */
 
-	body {
-		padding: 0 0 4em 0;
-	}
-
 	#header {
 		-moz-transform: translateY(0);
 		-webkit-transform: translateY(0);
@@ -1481,10 +1477,6 @@
 						}
 
 	@media screen and (max-width: 736px) {
-
-		body {
-			padding: 4em 0 0 0;
-		}
 
 		#header {
 			-moz-transform: translateY(0);
