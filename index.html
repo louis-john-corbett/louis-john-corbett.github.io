@@ -53,6 +53,18 @@
 
 		  ga('create', 'UA-67048813-2', 'auto');
 		  ga('send', 'pageview');
+
+			$(function() {
+			  $("a.tracked").click(function(e) {
+			    if (!ga.q) {
+			      var url = $(this).attr("href");
+						if (url == "#"){
+							url = "snapchatCode";
+						}
+			      ga("send", "event", "outbound", "click", url, {});
+			    }
+			  });
+			});
 		</script>
 	</head>
 
@@ -75,16 +87,15 @@
 
 						<footer>
 							<ul class="icons">
-								<li><a href="https://www.facebook.com/louis.john.corbett" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-								<li id="snapchat"><a href="#" id="snapchat-modal-link" title="Snapchat" data-toggle="modal" data-target=".snapchat-modal"><i class="fa fa-snapchat-ghost"></i></a></li>
-								<li id="instagramIcon"><a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram"><img id="instagram-icon" src="images/Instagram-v051916.png" height="45" width="45" /></a></li>
-								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></li>
+								<li><a href="https://www.facebook.com/louis.john.corbett" target="_blank" title="Facebook" class="tracked"><i class="fa fa-facebook"></i></a></li>
+								<li id="snapchat"><a href="#" id="snapchat-modal-link" title="Snapchat" data-toggle="modal" data-target=".snapchat-modal" class="tracked"><i class="fa fa-snapchat-ghost"></i></a></li>
+								<li id="instagramIcon"><a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram" class="tracked"><img id="instagram-icon" src="images/Instagram-v051916.png" height="45" width="45" /></a></li>
+								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn" class="tracked"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub" class="tracked"><i class="fa fa-github"></i></a></li>
                 <!--<li><a href="https://flic.kr/s/aHskHe7s3m" target="_blank" class="fa-flickr" title="Flickr">Flickr</a></li>-->
-                <li><a href="./gallery/index.html" target="_blank" title="Photo Album"><i class="fa fa-camera"></i></a></li>
-								<li><a href="./files/LouisJackCorbettResume.pdf" title="Resume (PDF)" download><i class="fa fa-file-pdf-o"></i></a></li>
-								<li><a href="mailto:louis.john.corbett@gmail.com" title="Email Me"><i class="fa fa-envelope-o"></i></a></li>
-								<!--<li><a href="#" class="fa-map-marker" target="_blank" title="Map to Come">Map to Come</a></li>-->
+                <li><a href="./gallery/index.html" target="_blank" title="Photo Album" class="tracked"><i class="fa fa-camera"></i></a></li>
+								<li><a href="./files/LouisJackCorbettResume.pdf" title="Resume (PDF)" class="tracked" download><i class="fa fa-file-pdf-o"></i></a></li>
+								<li><a href="mailto:louis.john.corbett@gmail.com" title="Email Me" class="tracked"><i class="fa fa-envelope-o"></i></a></li>
               </ul>
 						</footer>
 					</section>
