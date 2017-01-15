@@ -65,6 +65,19 @@
 			    }
 			  });
 			});
+
+			$(function() {
+			  $("a.tracked").mousedown(function(e) {
+			    if (!ga.q) {
+			      var url = $(this).attr("href");
+						if (url == "#"){
+							url = "snapchatCode";
+						}
+			      ga("send", "event", "outbound", "mousedown", url, {});
+			    }
+			  });
+			});
+
 		</script>
 	</head>
 
