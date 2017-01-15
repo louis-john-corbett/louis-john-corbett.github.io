@@ -55,29 +55,28 @@
 		  ga('send', 'pageview');
 
 			$(function() {
-			  $("a.tracked").click(function(e) {
-			    if (!ga.q) {
-			      var url = $(this).attr("href");
-						if (url == "#"){
-							url = "snapchatCode";
-						}
-			      ga("send", "event", "outbound", "click", url, {});
-			    }
-			  });
-			});
-
-			$(function() {
 			  $("a.tracked").mousedown(function(e) {
 			    if (!ga.q) {
 			      var url = $(this).attr("href");
 						if (url == "#"){
 							url = "snapchatCode";
 						}
-			      ga("send", "event", "outbound", "mousedown", url, {});
+						switch (event.which) {
+								case 1:
+										ga("send", "event", "outbound", "click", url, {});
+										break;
+								case 2:
+										ga("send", "event", "outbound", "middle-click", url, {});
+										break;
+								case 3:
+										ga("send", "event", "outbound", "right-click", url, {});
+										break;
+								default:
+										ga("send", "event", "outbound", "should-never-happen-click", url, {});
+									}
 			    }
 			  });
 			});
-
 		</script>
 	</head>
 
