@@ -600,6 +600,12 @@
 				background:#a3d1a3;
 				opacity:1.0;
 			}
+
+			ul li a i.fa-video-camera {
+				background:#b20000;
+				opacity:1.0;
+			}
+
 			ul li a i.fa-file-pdf-o {
 				background:#a00000;
 			}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css">
+            body{
+                background-color: #152836
+            }
+        </style>
+    </head>
+    <body class="home">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rVqWyNmbbik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/otTkX-xDmZ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#video-gallery').lightGallery();
+            $('#video-thumbnails').lightGallery({
+                  loadYoutubeThumbnail: true,
+                  youtubeThumbSize: 'default',
+                  loadVimeoThumbnail: true,
+                  vimeoThumbSize: 'thumbnail_medium',
+              });
+
+              $('#video-player-param').lightGallery({
+        youtubePlayerParams: {
+            modestbranding: 1,
+            showinfo: 0,
+            rel: 0,
+            controls: 0
+        },
+        vimeoPlayerParams: {
+            byline : 0,
+            portrait : 0,
+            color : 'A90707'
+        }
+    });
+
+        });
+
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="js/lightgallery-all.min.js"></script>
+    </body>
+</html>
