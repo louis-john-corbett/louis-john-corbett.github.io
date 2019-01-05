@@ -43,6 +43,8 @@
 				$('p').html(function() {
 			    return $(this).text().replace(/\b(\w)/g, '<span class="caps">$1</span>')
 				});
+
+				$('[data-toggle="tooltip"]').tooltip();
 			});
 
 			//Google Analytics code
@@ -99,14 +101,14 @@
 
 						<footer>
 							<ul class="icons">
-								<li><a href="https://www.facebook.com/corbettkacj" target="_blank" title="Facebook" class="tracked"><i class="fa fa-facebook"></i></a></li>
-								<li id="instagramIcon"><a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram" class="tracked"><img id="instagram-icon" src="images/Instagram-v051916.png" height="45" width="45" /></a></li>
-								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn" class="tracked"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub" class="tracked"><i class="fa fa-github"></i></a></li>
-                <li><a href="./gallery/index.html" target="_blank" title="Photo Gallery" class="tracked"><i class="fa fa-camera"></i></a></li>
-								<li><a href="./video-gallery/index.html" target="_blank" title="Video Gallery" class="tracked"><i class="fa fa-video-camera"></i></a></li>
-								<li><a href="./files/LouisJackCorbettResume.pdf" title="Resume (PDF)" class="tracked" download><i class="fa fa-file-pdf-o"></i></a></li>
-								<li><a href="mailto:louis.john.corbett@gmail.com" title="Email Me" class="tracked"><i class="fa fa-envelope-o"></i></a></li>
+								<li><a href="https://www.facebook.com/corbettkacj" target="_blank" title="Facebook" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-facebook"></i></a></li>
+								<li id="instagramIcon"><a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram" class="tracked"><img id="instagram-icon" src="images/Instagram-v051916.png" height="45" width="45" title="Instagram" data-toggle="tooltip" data-placement="bottom"/></a></li>
+								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github"></i></a></li>
+                <li><a href="./gallery/index.html" target="_blank" title="Photo Gallery" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-camera"></i></a></li>
+								<li><a href="./video-gallery/index.html" target="_blank" title="Video Gallery" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-video-camera"></i></a></li>
+								<li><a href="./files/LouisJackCorbettResume.pdf" title="Resume (PDF)" class="tracked" data-toggle="tooltip" data-placement="bottom" download><i class="fa fa-file-pdf-o"></i></a></li>
+								<li><a href="mailto:louis.john.corbett@gmail.com" title="Email Me" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope-o"></i></a></li>
               </ul>
 						</footer>
 					</section>
