@@ -60,9 +60,6 @@
 			  $("a.tracked").mousedown(function(e) {
 			    if (!ga.q) {
 			      var url = $(this).attr("href");
-						if (url == "#"){
-							url = "snapchatCode";
-						}
 						switch (event.which) {
 								case 1:
 										ga("send", "event", "outbound", "click", url, {});
@@ -130,15 +127,5 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 		</script>
-
-			<div class="modal fade snapchat-modal" id="snapchat-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-sm" role="document">
-			    <div class="modal-content">
-			      <div class="modal-body">
-			        <img src="./images/jacksnapcode.png" id="snapchat-snapcode" class="center-block" height="250" width="250">
-			      </div>
-			    </div>
-			  </div>
-			</div>
 	</body>
 </html>
