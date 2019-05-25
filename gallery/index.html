@@ -38,7 +38,17 @@
 					if (!ga.q) {
 						var fileName;
 						if ($(this).is("a")){
-							fileName = $(this).find('img').attr('src').split('/').pop();
+
+							if ($(this).find('img').attr('src') !== undefined){
+								fileName = $(this).find('img').attr('src').split('/').pop();
+							}
+							else if ($(this).find('img').attr('data-src') !== undefined){
+								fileName = $(this).find('img').attr('data-src').split('/').pop();
+							}
+							else{
+								filename = "unknown";
+							}
+
 							switch (event.which) {
 								case 1:
 									ga("send", "event", "image", "click", fileName, {});
@@ -54,6 +64,7 @@
 							}
 						}
 						else{
+							//always src for this one, no lazy loading for fulls
 							fileName = $('div.pic > img').attr('src').split('/').pop();
 							if ($(this).hasClass('nav-previous')){
 								ga("send", "event", "modal", "previous", fileName, {});
