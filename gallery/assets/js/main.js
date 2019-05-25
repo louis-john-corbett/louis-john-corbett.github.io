@@ -231,7 +231,12 @@
 					// <img> (which is then hidden). Gives us way more flexibility.
 
 						// Set background.
+						if ($image_img.attr('src') !== undefined){
 							$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
+						}
+						else if ($image_img.attr('data-src') !== undefined){
+							$image.css('background-image', 'url(' + $image_img.attr('data-src') + ')');
+						}
 
 						// Set background position.
 							if (x = $image_img.data('position'))
