@@ -28,8 +28,33 @@
 		<script>
 			$(document).ready(function(){
 				//Random background image rotation
-				var images = ['bg1.webp', 'bg2.webp', 'bg3.webp', 'bg4.webp', 'bg5.webp', 'bg6.webp'];
-				$('body').css({'background-image': 'url("images/overlay.webp"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/' + images[Math.floor(Math.random() * images.length)] + '")'});
+
+				var images;
+
+				async function WebpIsSupported() {
+				    // If the browser doesn't has the method createImageBitmap, you can't display webp format
+				    if (!self.createImageBitmap) return false;
+
+				    // Base64 representation of a white point image
+				    const webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+				    // Retrieve the Image in Blob Format
+				    const blob = await fetch(webpData).then(r => r.blob());
+
+				    // If the createImageBitmap method succeeds, return true, otherwise false
+				    return createImageBitmap(blob).then(() => true, () => false);
+				}
+
+				(async () => {
+			    if(await WebpIsSupported()) {
+							images = ['bg1.webp', 'bg2.webp', 'bg3.webp', 'bg4.webp', 'bg5.webp', 'bg6.webp']
+							$('body').css({'background-image': 'url("images/overlay.webp"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/' + images[Math.floor(Math.random() * images.length)] + '")'});
+
+			    } else {
+					 		images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg', 'bg6.jpg'];
+							$('body').css({'background-image': 'url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/' + images[Math.floor(Math.random() * images.length)] + '")'});
+			    }
+				})();
 
 				//Replace first letters with slightly larger font
 				$('h1').html(function() {
@@ -84,7 +109,13 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/profile-pic.webp" alt="" /></span>
+							<span class="avatar">
+								<picture>
+									<source srcset="images/profile-pic.webp" type="image/webp"/>
+									<source srcset="images/profile-pic.jpg" type="image/jpeg"/>
+									<img src="images/profile-pic.jpg" type="image/jpeg"/>
+								</picture>
+							</span>
 							<h1>Louis "Jack" Corbett</h1>
 							<p>Software Engineering Manager</p>
 							<p>Outdoors Enthusiast</p>
@@ -96,7 +127,15 @@
 						<footer>
 							<ul class="icons">
 								<li><a href="https://www.facebook.com/corbettkacj" target="_blank" title="Facebook" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-facebook"></i></a></li>
-								<li id="instagramIcon"><a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram" class="tracked"><img id="instagram-icon" src="images/Instagram-v051916.webp" height="45" width="45" title="Instagram" data-toggle="tooltip" data-placement="bottom"/></a></li>
+								<li id="instagramIcon">
+									<a href="https://www.instagram.com/corbettlj/?hl=en" target="_blank" title="Instagram" class="tracked">
+										<picture>
+											<source id="instagram-icon" srcset="images/Instagram-v051916.webp" type="image/webp" height="45" width="45" title="Instagram" data-toggle="tooltip" data-placement="bottom"/>
+											<source id="instagram-icon" srcset="images/Instagram-v051916.png" type="image/jpeg" height="45" width="45" title="Instagram" data-toggle="tooltip" data-placement="bottom"/>
+											<img id="instagram-icon" src="images/Instagram-v051916.png" type="image/jpeg" height="45" width="45" title="Instagram" data-toggle="tooltip" data-placement="bottom"/>
+										</picture>
+									</a>
+								</li>
 								<li><a href="https://www.linkedin.com/in/louis-corbett-6574b334" target="_blank" title="LinkedIn" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="https://github.com/louis-john-corbett" target="_blank" title="GitHub" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github"></i></a></li>
                 <li><a href="./gallery/index.html" target="_blank" title="Photo Gallery" class="tracked" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-camera"></i></a></li>
