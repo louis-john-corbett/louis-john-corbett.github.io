@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,n){"use strict";n.r(e);var a=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},o=[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"about"},[n("h2",[t._v("This is an application enabling you to find ")]),n("h2",[t._v("your optimal fantasy baseball lineup.")]),n("p",[t._v("It works especially well when you're on the fence about who to start and want their historical performance against their opponent")])])}],i=n("2877"),l={},s=Object(i["a"])(l,a,o,!1,null,null,null);e["default"]=s.exports}}]);
-//# sourceMappingURL=about.1f4bc7c0.js.map
+//# sourceMappingURL=about.9fb53951.js.map
